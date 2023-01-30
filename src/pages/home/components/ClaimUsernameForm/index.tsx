@@ -23,7 +23,7 @@ export function ClaimUsernameForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<ClaimUsernameFormData>({
     resolver: zodResolver(claimUsernameFormSchema),
   })
@@ -33,6 +33,7 @@ export function ClaimUsernameForm() {
 
     await router.push(`/register?username=${username}`)
   }
+
   return (
     <>
       <S.Form as="form" onSubmit={handleSubmit(handleClaimUsername)}>
@@ -42,7 +43,7 @@ export function ClaimUsernameForm() {
           placeholder="seu-usuário"
           {...register('username')}
         />
-        <Button size="sm" type="submit">
+        <Button size="sm" type="submit" disabled={isSubmitting}>
           Reservar
           <ArrowRight />
         </Button>
