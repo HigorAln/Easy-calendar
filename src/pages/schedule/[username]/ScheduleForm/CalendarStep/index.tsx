@@ -1,11 +1,14 @@
 import { Calendar } from '@/components/Calendar'
 import * as S from './styles'
+import React from 'react'
 
 export function CalendarStep() {
-  const isDateSelected = false
+  const [selectedDate, setSelectedDate] = React.useState<Date | null>(null)
+
+  const isDateSelected = !!selectedDate
   return (
     <S.Container isTimePickerOpen={isDateSelected}>
-      <Calendar />
+      <Calendar selectedDate={selectedDate} onDateSelected={setSelectedDate} />
 
       {isDateSelected && (
         <S.TimePicker>
