@@ -32,7 +32,7 @@ export function CalendarStep() {
     async () => {
       const response = await api.get(`/users/${username}/availability`, {
         params: {
-          date: dayjs(selectedDate).format('YYYY-MM-DD'),
+          date: selectedDateWithoutTime,
         },
       })
 
