@@ -65,7 +65,7 @@ export default function Register() {
       <NextSeo title="Crie uma conta | Easy Calendar" />
       <S.Container>
         <S.Header>
-          <Heading as="strong">Bem-vindo ao Ignite Call!</Heading>
+          <Heading as="strong">Bem-vindo ao Easy Calendar!</Heading>
 
           <Text>
             Precisamos de algumas informações para criar seu perfil! Ah, você
@@ -79,7 +79,7 @@ export default function Register() {
           <label>
             <Text size="sm">Nome de usuário</Text>
             <TextInput
-              prefix="ignite.com/"
+              prefix="easy-calendar.higorallan.com/"
               placeholder="seu-usuario"
               {...register('username')}
             />

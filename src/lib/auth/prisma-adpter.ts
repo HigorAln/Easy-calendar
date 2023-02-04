@@ -9,7 +9,7 @@ export function PrismaAdapter(
 ): Adapter {
   return {
     async createUser(user) {
-      const { '@ignite-call:userId': userIdOnCookies } = parseCookies({ req })
+      const { '@easy-calendar:userId': userIdOnCookies } = parseCookies({ req })
 
       if (!userIdOnCookies) {
         throw new Error('No userId on cookies')
@@ -26,7 +26,7 @@ export function PrismaAdapter(
         },
       })
 
-      destroyCookie({ res }, '@ignite-call:userId', {
+      destroyCookie({ res }, '@easy-calendar:userId', {
         path: '/',
       })
 
