@@ -81,7 +81,6 @@ export default async function handle(
     )
 
     const isTimeInPast = referenceDate
-      .subtract(3, 'hour')
       .set('hour', time)
       .isBefore(dayjs(new Date()))
 
