@@ -76,10 +76,14 @@ export default async function handle(
 
   const availableTimes = possibleTimes.filter((time) => {
     const isTimeBlocked = blockedTimes.some(
-      (blockedTime) => blockedTime.date.getHours() === time,
+      // Put - 3 hour for manipulate database in the vercel
+      (blockedTime) => blockedTime.date.getHours() - 3 === time,
     )
 
-    const isTimeInPast = referenceDate.set('hour', time).isBefore(new Date())
+    const isTimeInPast = referenceDate
+      .subtract(3, 'hour')
+      .set('hour', time)
+      .isBefore(dayjs(new Date()))
 
     return !isTimeBlocked && !isTimeInPast
   })
