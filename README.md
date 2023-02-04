@@ -6,8 +6,7 @@ Aplicação integrada com google calendar, com intuito do usuário criar um cale
 
 ## Demonstração
 
-![Imagem da home do Easy Calendar](https://lh3.googleusercontent.com/fife/AMPSemeZ04FBv1xddjUSZz5Uz1QzZ4bDOnJKT7ltxtlD8J4WXyJPnsEgyLUntyX4uDAQzR7HlShKA0REUux-WXyTgtQMMKahaOAPXCekzJ91JBT2nCBRlDgKKt8_pZZfLjfkquSfiLpOkHYQAbMp5vNweshqWkjR8DITtGE-3L4TvY_BXJHx3xdsAsof8_QwkKQcSxzoyR5UpjW4kcLKBjzv7wGz8Q7eAlx-gibBYsaz4KD1Vdo7L7xJoutMBjyeGZqDoPUIvYYusYz0NobqJIF4bbECvI5_emPb3c68mtmyDeZK_QkvcN0ETQ2v_IMV6X4xNmBzyefVerMr7LM0w-FXYinQYd9cSdW-rbwe6NQoVFLfkOm23XnBcsSMLvLTBCt_gouDfR490If7GUeP9r1m03___lEbqaiOnPBWU7QUgKlK57dk2Qhr6CDOodxr7j15XrNxzvOTosW0SwWQH8ms8pKhDuHJz6j6fRWFmej9PFkHaEnSams73CUhDp-I29xesM0OqEF7sKNvbsa8qS0QglSZePCIGPNvTwa6-oZmoswWAOlenWByhrD7fxQKL1_VDg3RlZuV0kY2s4Z1ktRn_O80MYJ3dH1p1CZqbhbhIlb8IMH4h5tCgNiZHUm1bGuQFYpMIDtN1EcbZrmeHJlQQXICHfxg6WtcOqyN2bsyrgivxwmEzEWtZGuZ9FRed2S-hrBCfIqBG-uMrAtDXSiIobR0lfOfNRqTgyPI6BCh5Jyv7pm35EbAwdpZSVu57ae7MJb_oksJQ8S99rreLaaz1myev8THUOnHZLii8BL3j_0ZOF5gOrIipNTAZv6XhRNw1ssT8Om3bbnsCAaJHA8zZSpclNrCsJSRBI8oVDKTqZ2eNjLkhCgv32hGhPsFgXpuo-CqNGAQ3tIBUqAtux-n5FmW1Hq0BpP3FxxXdTtwubgFgC98Cai-m1XKtotJelwk5B8=w1920-h983)
-
+![Captura de tela de 2023-02-04 11-12-24](https://user-images.githubusercontent.com/86208458/216773145-3ee2f25e-154e-44c8-9871-d5e4a8e20ce5.png)
 
 ## Roadmap
 
@@ -72,7 +71,7 @@ Inicie o servidor
 
 ## Screenshots
 
-![Schedule screenshot](/public/scheduling-img.png)
+![scheduling-img](https://user-images.githubusercontent.com/86208458/216773150-bab033cd-c286-4a29-9bdb-d649dd6f3460.png)
 
 
 ## Autores
