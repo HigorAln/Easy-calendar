@@ -6,6 +6,7 @@ export function ScheduleForm() {
   const [selectedDateTime, setSelectedDateTime] = React.useState<Date | null>()
 
   function handleClearSelectedDateTime() {
+    console.log('entrou')
     setSelectedDateTime(null)
   }
 
@@ -18,5 +19,10 @@ export function ScheduleForm() {
     )
   }
 
-  return <CalendarStep onSelectDateTime={setSelectedDateTime} />
+  return (
+    <CalendarStep
+      onSelectDateTime={setSelectedDateTime}
+      onCloseList={handleClearSelectedDateTime}
+    />
+  )
 }

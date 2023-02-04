@@ -6,14 +6,16 @@ export const Container = styled(Box, {
   display: 'grid',
   position: 'relative',
   maxWidth: '100%',
+  overflow: 'hidden',
 
   variants: {
     isTimePickerOpen: {
       true: {
         gridTemplateColumns: '1fr 280px',
 
-        '@media (max-width: 900px)': {
-          gridTemplateColumns: '1fr',
+        '@media (max-width: 700px)': {
+          display: 'flex',
+          flexDirection: 'column',
         },
       },
       false: {
@@ -34,6 +36,14 @@ export const TimePicker = styled('div', {
   bottom: 0,
   right: 0,
   width: 280,
+
+  '@media (max-width: 700px)': {
+    zIndex: 100,
+    backgroundColor: '$gray800',
+    boxShadow: '0 0 10px $colors$gray900',
+
+    borderLeft: 'none',
+  },
 })
 
 export const TimePickerHeader = styled(Text, {
@@ -81,5 +91,29 @@ export const TimePickerItem = styled('button', {
 
   '&:focus': {
     boxShadow: '0 0 0 2px $colors$gray100',
+  },
+})
+
+export const TimePickerWrapperHeader = styled('div', {
+  display: 'flex',
+  alignItems: 'flex-start',
+
+  justifyContent: 'space-between',
+})
+
+export const ButtonCloseHeader = styled('button', {
+  all: 'unset',
+  display: 'none',
+
+  cursor: 'pointer',
+  padding: '0.25rem',
+  borderRadius: '0.25rem',
+
+  '@media (max-width: 700px)': {
+    display: 'flex',
+  },
+
+  '&:hover': {
+    backgroundColor: '$gray700',
   },
 })

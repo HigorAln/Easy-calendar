@@ -5,6 +5,7 @@ import dayjs from 'dayjs'
 import { api } from '@/lib/axios'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
+import { X } from 'phosphor-react'
 
 interface Availability {
   possibleTimes: number[]
@@ -13,13 +14,19 @@ interface Availability {
 
 interface CalendarStepProps {
   onSelectDateTime: (date: Date) => void
+  onCloseList: () => void
 }
 
-export function CalendarStep({ onSelectDateTime }: CalendarStepProps) {
+export function CalendarStep({
+  onSelectDateTime,
+  onCloseList,
+}: CalendarStepProps) {
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(null)
   const router = useRouter()
 
-  const isDateSelected = !!selectedDate
+  const isDateSelected = React.useMemo(() => {
+    return !!selectedDate
+  }, [selectedDate])
   const username = String(router.query.username)
 
   const weekDay = selectedDate ? dayjs(selectedDate).format('dddd') : null
@@ -56,7 +63,10 @@ export function CalendarStep({ onSelectDateTime }: CalendarStepProps) {
     onSelectDateTime(dateWithTime)
   }
 
-  console.log({ availability })
+  function handleCloseListHours() {
+    onCloseList()
+    setSelectedDate(null)
+  }
 
   return (
     <S.Container isTimePickerOpen={isDateSelected}>
@@ -64,9 +74,14 @@ export function CalendarStep({ onSelectDateTime }: CalendarStepProps) {
 
       {isDateSelected && (
         <S.TimePicker>
-          <S.TimePickerHeader>
-            {weekDay} <span>{describedDate}</span>
-          </S.TimePickerHeader>
+          <S.TimePickerWrapperHeader>
+            <S.TimePickerHeader>
+              {weekDay} <span>{describedDate}</span>
+            </S.TimePickerHeader>
+            <S.ButtonCloseHeader onClick={handleCloseListHours}>
+              <X />
+            </S.ButtonCloseHeader>
+          </S.TimePickerWrapperHeader>
 
           <S.TimePickerList>
             {availability?.possibleTimes.map((hour) => {
