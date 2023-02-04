@@ -39,7 +39,7 @@ export function ClaimUsernameForm() {
       <S.Form as="form" onSubmit={handleSubmit(handleClaimUsername)}>
         <TextInput
           size="sm"
-          prefix="easy-calendar.higorallan.com/"
+          prefix="example.com/"
           placeholder="seu-usuário"
           {...register('username')}
         />

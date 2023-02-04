@@ -79,7 +79,7 @@ export default function Register() {
           <label>
             <Text size="sm">Nome de usuário</Text>
             <TextInput
-              prefix="easy-calendar.higorallan.com/"
+              prefix="example.com/"
               placeholder="seu-usuario"
               {...register('username')}
             />
